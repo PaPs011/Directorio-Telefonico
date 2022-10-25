@@ -43,6 +43,11 @@ function pintar() {
         lista.innerHTML = "<h2>No tenemos amigos</h2>";
     }
 }
+//validacion de nombre
+
+
+
+//fin de validacion de nombre
 
 function showdetallesAmigo(tel) {
     let Detalles = document.getElementById("detallesAmigo");
@@ -72,6 +77,70 @@ btnCancelar.addEventListener("click", (event) => {
 });
 
 btnGuardar.addEventListener("click", (event) => {
+    
+     formulario.addEventListener("input", function(event){
+        if(formulario[0].value===null||formulario[0].value===""){
+            error.innerHTML="";
+            error.className="error";
+        }else
+        {
+        showError()
+        }
+     })
+
+     formulario.addEventListener("input", function(event){
+        if(formulario[1].value===null||formulario[1].value===""){
+            error.innerHTML="";
+            error.className="error";
+        }else
+        {
+        showError()
+        }
+     })
+
+     formulario.addEventListener("input", function(event){
+        if(formulario[2].value===null||formulario[2].value===""){
+            error.innerHTML="";
+            error.className="error";
+        }else
+        {
+        showError()
+        }
+     })
+
+     formulario.addEventListener("input", function(event){
+        if(formulario[3].value===null||formulario[3].value===""){
+            error.innerHTML="";
+            error.className="error";
+        }else
+        {
+        showError()
+        }
+     })
+
+    let error = document.getElementById("error");
+    function showError(){
+        if(formulario[0].value===null||formulario[0].value===""){
+            error.textContent= "debe de argegar un nombre";
+        }
+        else if(formulario[1].value===null||formulario[1].value===""){
+            error.textContent= "debe de argegar un numero de telefono valido";
+        }
+        else if(formulario[2].value===null||formulario[2].value===""){
+            error.textContent= "debe de argegar un correo";
+        }
+        else if(formulario[3].value===null||formulario[3].value===""){
+            error.textContent= "debe de agregar un foto";
+        }
+    }
+
+
+    if(formulario[0,1,2,3].value===null||formulario[0,1,2,3].value===""){
+        showError()
+        event.preventDefault();
+    }
+    
+ else {
 
     let contacto = {
         nombre: formulario["nombre"].value,
@@ -83,4 +152,23 @@ btnGuardar.addEventListener("click", (event) => {
     limpiar();
     pintar();
     event.preventDefault();
-})
+   
+
+
+}})
+
+
+//else if(formulario[1].value===null||formulario[1].value===""){
+  // showError();
+    //event.preventDefault();
+//}
+
+//else if(formulario[2].value===null||formulario[2].value===""){
+  //  showError();
+    //event.preventDefault();
+//}
+
+//else if(formulario[3].value===null||formulario[3].value===""){
+  //  showError()
+    //event.preventDefault();
+//}

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,11 +16,13 @@
             <h2>Agregar amigo</h2>
             <form action="" id="formulario">
                 <label for="nombre">Nombre:
-                <input type="text" name="nombre">
+                    <input id="el-nombre" type="text" name="nombre">
                 </label>
+
                 <label for="telefono">Telefono:
                     <input type="text" name="telefono">
                 </label>
+                
                 <label for="correo">Correo:
                     <input type="mail" name="correo">
                 </label>
@@ -43,6 +46,7 @@
        
 
     </div>
+    <span id="error"></span>
     <script src="formulario.js"></script>
 </body>
 </html>

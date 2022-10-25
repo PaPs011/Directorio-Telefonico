@@ -173,3 +173,15 @@ main .lista .listaAmigos div button{
 {
     background-color: aquamarine;
 }
+
+#error{
+    padding: 0;
+    position: absolute;
+    bottom: 70%;
+    left: 43%;
+    background-color: #900;
+    font-size: 17px;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
